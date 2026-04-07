@@ -26,6 +26,6 @@ typedef enum {
 } ErrorStatus;
 
 /* Generic pointer for raw memory access [cite: 11] */
-typedef void* Ptr_t;
+typedef void* Ptr_t; //test
 
 #endif /* STD_TYPES_H [cite: 12] */
