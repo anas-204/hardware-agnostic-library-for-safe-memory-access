@@ -20,4 +20,10 @@
 /* Read a value from a bit-field region [cite: 19] */
 #define READ_FIELD(VAR, MASK, BIT) (((VAR) >> (BIT)) & (MASK))
 
+/* Set multiple bits via a mask [cite: 17] */
+#define SET_MASK(VAR, MASK)        ((VAR) |= (MASK))
+
+/* Clear multiple bits via a mask [cite: 17] */
+#define CLR_MASK(VAR, MASK)        ((VAR) &= ~(MASK))
+
 #endif /* BIT_MATH_H */
