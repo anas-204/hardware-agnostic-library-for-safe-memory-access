@@ -41,4 +41,55 @@ A communication simulation that packs and unpacks structured data into a fixed 6
 ├── Message.h        # Message structures, payload unions, and enums
 ├── Message.c        # Encoder/Decoder and sequence number logic
 └── main.c           # Demonstration and testing script
+```
 
+## Quick Start
+
+### Prerequisites
+
+- [CMake](https://cmake.org/) (Version 3.10 or higher)
+- C Compiler (e.g., GCC, Clang, or MSVC)
+
+### Build Steps (using CMake)
+
+1. **Navigate to the project directory:**
+
+   ```bash
+   cd hardware-agnostic-library-for-safe-memory-access
+   ```
+
+2. **Create a build directory:**
+
+   ```bash
+   mkdir build
+   cd build
+   ```
+
+3. **Configure and Build:**
+
+   ```bash
+   cmake ..
+   cmake --build .
+   ```
+
+   *This will generate the project executable.*
+
+### Alternative Build (using GCC directly)
+
+If you do not want to use CMake, you can compile the application directly using GCC (requires C11 standard support):
+
+```bash
+gcc -std=c11 main.c Message.c MemScanner.c -o Embedded_1
+```
+
+### Running the Application
+
+Run the generated executable to see the `MemScanner` and message protocol demonstrations in the terminal:
+
+```bash
+# On Windows
+.\Embedded_1.exe
+
+# On Linux/macOS
+./Embedded_1
+```
